@@ -11,5 +11,5 @@ COPY . /usr/share/nginx/html
 RUN chmod -R 755 /usr/share/nginx/html
 
 # تشغيل السيرفر
-EXPOSE 80
+EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]
