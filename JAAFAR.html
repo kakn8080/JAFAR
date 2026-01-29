@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>JAFAR | Global Automation Architect</title>
+    <meta name="description" content="I replace manual chaos with steel code. Specialized in AI-driven systems and n8n architectures.">
+    <meta property="og:title" content="JAFAR | Global Automation Architect">
+    <meta property="og:description" content="Building autonomous business empires. Turn complexity into automated cash-flow.">
+    <meta property="og:image" content="https://jafar.allarojack.cloud/Gemini_Generated_Image_qyha41qyha41qyha.jpg">
+    <meta property="og:url" content="https://jafar.allarojack.cloud">
+    <meta name="twitter:card" content="summary_large_image">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
@@ -30,9 +38,9 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .text-gradient { background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .video-frame { position: relative; border-radius: 20px; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.1); transition: 0.5s; }
+        .video-frame { position: relative; border-radius: 20px; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.1); transition: 0.5s; cursor: pointer; }
         .video-frame:hover { border-color: #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
-        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(59, 130, 246, 0.8); rounded-full: 50%; display: flex; align-items: center; justify-content: center; border-radius: 50%; cursor: pointer; }
+        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(59, 130, 246, 0.8); rounded-full: 50%; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10; }
     </style>
 </head>
 <body class="text-gray-200 antialiased overflow-x-hidden">
@@ -53,14 +61,14 @@
                 <p id="hDesc" class="text-xl text-gray-400 mb-10 leading-relaxed max-w-xl">Specializing in bespoke AI-driven systems for high-stakes companies and visionaries. We turn complexity into automated cash-flow machines.</p>
                 <div class="flex flex-wrap gap-4">
                     <a href="https://wa.me/967737344853" id="hBtn" class="px-8 py-4 bg-brandBlue hover:bg-blue-600 text-white font-black rounded-full transition-all shadow-2xl shadow-blue-500/20">Architect My System 🚀</a>
-                    <<a href="https://mail.google.com/mail/?view=cm&fs=1&to=jafarnjeeb@gmail.com" target="_blank" id="emailBtn" class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full border border-white/10 transition-all">Email Me</a>>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jafarnjeeb@gmail.com" target="_blank" id="emailBtn" class="px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full border border-white/10 transition-all">Email Me</a>
                     <a href="#solutions" id="secBtn" class="px-8 py-4 bg-transparent hover:text-brandBlue text-gray-400 font-bold transition-all">View Ecosystems</a>
                 </div>
             </div>
             <div class="flex justify-center reveal active">
                 <div class="relative group">
                     <div class="absolute inset-0 bg-brandBlue blur-[100px] opacity-10 group-hover:opacity-30 transition duration-1000"></div>
-                    <img src="image_2.png" id="profileImg" class="relative w-80 h-80 lg:w-[480px] lg:h-[480px] rounded-full object-cover border-[12px] border-white/5 transition duration-700">
+                    <img src="Gemini_Generated_Image_qyha41qyha41qyha.jpg" id="profileImg" class="relative w-80 h-80 lg:w-[480px] lg:h-[480px] rounded-full object-cover border-[12px] border-white/5 transition duration-700 hover:scale-[1.02]">
                 </div>
             </div>
         </div>
@@ -91,16 +99,16 @@
 
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="reveal">
-                    <div class="video-frame aspect-video mb-6">
-                        <div class="play-btn">▶</div>
+                    <div class="video-frame aspect-video mb-6 group">
+                        <div class="play-btn group-hover:scale-110 transition">▶</div>
                         <div class="absolute inset-0 flex items-center justify-center text-gray-700 font-mono text-sm uppercase tracking-widest">[ Demo: Lead Gen System ]</div>
                     </div>
                     <h4 id="demo1Title" class="text-2xl font-bold mb-2">Omniscient Prospecting</h4>
                     <p id="demo1Desc" class="text-gray-500">Autonomous data extraction and qualification from global sources.</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
-                    <div class="video-frame aspect-video mb-6">
-                        <div class="play-btn">▶</div>
+                    <div class="video-frame aspect-video mb-6 group">
+                        <div class="play-btn group-hover:scale-110 transition">▶</div>
                         <div class="absolute inset-0 flex items-center justify-center text-gray-700 font-mono text-sm uppercase tracking-widest">[ Demo: AI Sales Agent ]</div>
                     </div>
                     <h4 id="demo2Title" class="text-2xl font-bold mb-2">Neural Sales Engines</h4>
@@ -214,12 +222,10 @@
             currentLang = currentLang === 'en' ? 'ar' : 'en';
             document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
             document.body.style.fontFamily = currentLang === 'ar' ? "'Cairo', sans-serif" : "'Plus Jakarta Sans', sans-serif";
-            
             for (let id in content[currentLang]) {
                 const el = document.getElementById(id);
                 if (el) el.innerHTML = content[currentLang][id];
             }
-            
             reveal();
         }
 
