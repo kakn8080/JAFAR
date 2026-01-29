@@ -1,15 +1,12 @@
-# استخدام نسخة nginx الخفيفة
 FROM nginx:alpine
 
-# حذف ملفات nginx الافتراضية لضمان عدم ظهور صفحة Welcome
-RUN rm -rf /usr/share/nginx/html/*
+# إعداد Nginx ليعمل على بورت 3000 بدلاً من 80
+RUN sed -i 's/listen[[:space:]]*80;/listen 3000;/g' /etc/nginx/conf.d/default.conf
 
-# نسخ كل ملفات موقعك (index.html والصور) إلى مجلد السيرفر
+RUN rm -rf /usr/share/nginx/html/*
 COPY . /usr/share/nginx/html
 
-# إعطاء صلاحيات القراءة للملفات
-RUN chmod -R 755 /usr/share/nginx/html
-
-# تشغيل السيرفر
+# فتح المنفذ 3000
 EXPOSE 3000
+
 CMD ["nginx", "-g", "daemon off;"]
