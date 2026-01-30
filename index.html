@@ -44,7 +44,8 @@
         .text-gradient { background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .video-frame { position: relative; border-radius: 20px; overflow: hidden; background: #111; border: 1px solid rgba(255,255,255,0.1); transition: 0.5s; cursor: pointer; }
         .video-frame:hover { border-color: #3b82f6; box-shadow: 0 0 30px rgba(59, 130, 246, 0.2); }
-        .play-btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(59, 130, 246, 0.8); rounded-full: 50%; display: flex; align-items: center; justify-content: center; border-radius: 50%; z-index: 10; }
+        details summary::-webkit-details-marker { display: none; }
+        details[open] summary { color: #3b82f6; }
     </style>
 </head>
 <body class="text-gray-200 antialiased overflow-x-hidden">
@@ -88,8 +89,19 @@
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <h3 id="solTitle" class="text-3xl font-bold mb-6 text-green-400">The Jafar Solution</h3>
-                    <p id="solDesc" class="text-xl text-gray-400 leading-relaxed">We replace fragile manual links with "Steel Code." Intelligent, self-healing n8n architectures that ensure your business operates perfectly—anytime, anywhere.</p>
+                    <p id="solDesc" class="text-xl text-gray-400 leading-relaxed">We transform tedious manual workflows into intelligent automation pathways. We build sovereign systems that ensure your business flows with clinical precision—anytime, anywhere.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-black/30 border-y border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto reveal">
+                <p id="privacyText" class="text-lg lg:text-xl text-gray-400 leading-relaxed italic">
+                    <span class="text-brandBlue font-bold not-italic block mb-2">🛡️ Privacy First | الخصوصية أولاً</span>
+                    To protect the sensitive data and proprietary architectures of our clients, the following demonstrations are visual simulations that reflect our technical logic while keeping actual configurations confidential.
+                </p>
             </div>
         </div>
     </section>
@@ -104,16 +116,18 @@
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="reveal">
                     <div class="video-frame aspect-video mb-6 group">
-                        <div class="play-btn group-hover:scale-110 transition">▶</div>
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-700 font-mono text-sm uppercase tracking-widest">[ Demo: Lead Gen System ]</div>
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500">
+                            <source src="hailuo-2_3_A_realistic_cinematic_shot_from_behind_the_shoulder_of_a_business_professional_s-0.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h4 id="demo1Title" class="text-2xl font-bold mb-2">Omniscient Prospecting</h4>
                     <p id="demo1Desc" class="text-gray-500">Autonomous data extraction and qualification from global sources.</p>
                 </div>
                 <div class="reveal" style="transition-delay: 0.2s;">
                     <div class="video-frame aspect-video mb-6 group">
-                        <div class="play-btn group-hover:scale-110 transition">▶</div>
-                        <div class="absolute inset-0 flex items-center justify-center text-gray-700 font-mono text-sm uppercase tracking-widest">[ Demo: AI Sales Agent ]</div>
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500">
+                            <source src="hailuo-2_3_A_close-up_shot_of_a_person_holding_a_high-end_smartphone_in_their_hand._On_the_-0.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <h4 id="demo2Title" class="text-2xl font-bold mb-2">Neural Sales Engines</h4>
                     <p id="demo2Desc" class="text-gray-500">WhatsApp & CRM agents that think, negotiate, and close deals.</p>
@@ -150,6 +164,30 @@
         </div>
     </section>
 
+    <section class="py-32 bg-[#050505]">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 id="faqTitle" class="text-4xl font-black mb-16 text-center uppercase">Common Inquiries</h2>
+            <div class="space-y-4">
+                <details class="glass p-6 rounded-2xl reveal">
+                    <summary id="q1" class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">How long to deploy? <span class="text-brandBlue">+</span></summary>
+                    <p id="a1" class="mt-4 text-gray-400 leading-relaxed">Most bespoke systems are architected and deployed within 14 to 21 days.</p>
+                </details>
+                <details class="glass p-6 rounded-2xl reveal">
+                    <summary id="q2" class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">Is my data safe? <span class="text-brandBlue">+</span></summary>
+                    <p id="a2" class="mt-4 text-gray-400 leading-relaxed">Security is paramount. We build in encrypted environments where you maintain 100% ownership of your keys and data.</p>
+                </details>
+                <details class="glass p-6 rounded-2xl reveal">
+                    <summary id="q3" class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">Cost & Pricing? <span class="text-brandBlue">+</span></summary>
+                    <p id="a3" class="mt-4 text-gray-400 leading-relaxed">Pricing is tailored to the complexity and volume of operations. We focus on providing massive value that outweighs the cost.</p>
+                </details>
+                <details class="glass p-6 rounded-2xl reveal">
+                    <summary id="q4" class="font-bold text-xl cursor-pointer list-none flex justify-between items-center">Does it grow with us? <span class="text-brandBlue">+</span></summary>
+                    <p id="a4" class="mt-4 text-gray-400 leading-relaxed">Absolutely. Our systems are modular and designed to scale as your business expands into new markets.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <footer class="py-32 relative text-center">
         <div class="container mx-auto px-6">
             <h2 id="fTitle" class="text-5xl lg:text-7xl font-black mb-12 uppercase tracking-tighter">Efficiency. <span class="text-brandBlue">Scale.</span> Freedom.</h2>
@@ -183,7 +221,8 @@
                 trapTitle: 'The Problem',
                 trapDesc: 'Most businesses are built on "Human Sand." When people are tired, busy, or quit, the growth stops. Manual processes are the silent killers of scalability.',
                 solTitle: 'The Jafar Solution',
-                solDesc: 'We replace fragile manual links with "Steel Code." Intelligent, self-healing n8n architectures that ensure your business operates perfectly—anytime, anywhere.',
+                solDesc: 'We transform tedious manual workflows into intelligent automation pathways. We build sovereign systems that ensure your business flows with clinical precision—anytime, anywhere.',
+                privacyText: '<span class="text-brandBlue font-bold not-italic block mb-2">🛡️ Privacy First | الخصوصية أولاً</span> To protect the sensitive data and proprietary architectures of our clients, the following demonstrations are visual simulations that reflect our technical logic while keeping actual configurations confidential.',
                 eTitle: 'Bespoke Ecosystems.',
                 eDesc: 'We don\'t do "one size fits all." Whether you are a Real Estate giant, a Tech Startup, or a Global Entrepreneur, we architect systems tailored to your unique DNA.',
                 demo1Title: 'Omniscient Prospecting',
@@ -191,6 +230,15 @@
                 demo2Title: 'Neural Sales Engines',
                 demo2Desc: 'WhatsApp & CRM agents that think, negotiate, and close deals.',
                 tTitle: 'Global Impact.',
+                faqTitle: 'Common Inquiries',
+                q1: 'How long to deploy? <span class="text-brandBlue">+</span>',
+                a1: 'Most bespoke systems are architected and deployed within 14 to 21 days.',
+                q2: 'Is my data safe? <span class="text-brandBlue">+</span>',
+                a2: 'Security is paramount. We build in encrypted environments where you maintain 100% ownership of your keys and data.',
+                q3: 'Cost & Pricing? <span class="text-brandBlue">+</span>',
+                a3: 'Pricing is tailored to the complexity and volume of operations. We focus on providing massive value that outweighs the cost.',
+                q4: 'Does it grow with us? <span class="text-brandBlue">+</span>',
+                a4: 'Absolutely. Our systems are modular and designed to scale as your business expands into new markets.',
                 fTitle: 'Efficiency. <span class="text-brandBlue">Scale.</span> Freedom.',
                 fDesc: '"The future doesn\'t belong to those who work harder, but to those who automate better."',
                 rights: '© 2026 JAFAR. All Rights Reserved.',
@@ -207,7 +255,8 @@
                 trapTitle: 'المشكلة',
                 trapDesc: 'معظم الشركات تُبنى على "رمال بشرية". عندما يتعب الموظفون أو يستقيلون، يتوقف النمو. العمليات اليدوية هي القاتل الصامت للتوسع.',
                 solTitle: 'حل جعفر',
-                solDesc: 'نستبدل الروابط البشرية الهشة بـ "كود فولاذي". أنظمة n8n ذكية تضمن عمل شركتك بدقة متناهية—في أي وقت ومن أي مكان.',
+                solDesc: 'نحول سلاسل العمل اليدوية المجهدة إلى مسارات أتمتة ذكية. نبني لك أنظمة سيادية تضمن تدفق أعمالك بدقة متناهية، لتعمل شركتك بأعلى كفاءة—في أي وقت ومن أي مكان.',
+                privacyText: '<span class="text-brandBlue font-bold not-italic block mb-2">🛡️ الخصوصية أولاً | Privacy First</span> حفاظاً على سرية بيانات عملائنا وهياكل أنظمتهم الخاصة، العروض التالية هي نماذج محاكاة توضيحية تعكس القوة التقنية والمنطق الذي نصمم به الأنظمة، مع الالتزام الكامل بخصوصية الإعدادات الفعلية.',
                 eTitle: 'أنظمة مخصصة.',
                 eDesc: 'نحن لا نقدم حلولاً جاهزة. سواء كنت عملاقاً عقارياً، أو شركة ناشئة، أو رائد أعمال عالمي، نحن نصمم النظام ليتناسب مع حمضك النووي التجاري.',
                 demo1Title: 'التنقيب الكلي عن العملاء',
@@ -215,6 +264,15 @@
                 demo2Title: 'محركات المبيعات العصبية',
                 demo2Desc: 'وكلاء واتساب وCRM يفكرون، يتفاوضون، ويغلقون الصفقات.',
                 tTitle: 'تأثير عالمي.',
+                faqTitle: 'أسئلة شائعة',
+                q1: 'كم يستغرق النشر؟ <span class="text-brandBlue">+</span>',
+                a1: 'يتم تصميم ونشر معظم الأنظمة المخصصة في غضون 14 إلى 21 يوماً.',
+                q2: 'هل بياناتي آمنة؟ <span class="text-brandBlue">+</span>',
+                a2: 'الأمن هو أولويتنا. نبني الأنظمة في بيئات مشفرة حيث تملك أنت السيطرة الكاملة على بياناتك.',
+                q3: 'التكلفة والأسعار؟ <span class="text-brandBlue">+</span>',
+                a3: 'يتم تحديد السعر بناءً على مدى تعقيد وحجم العمليات. نركز على تقديم قيمة ضخمة تتجاوز التكلفة.',
+                q4: 'هل ينمو النظام معنا؟ <span class="text-brandBlue">+</span>',
+                a4: 'بالتأكيد. أنظمتنا معيارية ومصممة للتوسع مع نمو أعمالك ودخولك أسواقاً جديدة.',
                 fTitle: 'كفاءة. <span class="text-brandBlue">توسع.</span> حرية.',
                 fDesc: '"المستقبل لا ينتمي لمن يعمل بجهد أكبر، بل لمن يؤتمت بشكل أفضل."',
                 rights: '© 2026 جعفر. جميع الحقوق محفوظة.',
